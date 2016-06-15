@@ -1,0 +1,69 @@
+.login-form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+#inputUsername {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#inputPassword {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+.wrapper{
+    overflow:hidden; /*make sure the wrapper has no dimension*/
+    margin-bottom:10px;
+    ;
+}
+
+.item1{
+    position:relative;
+    float:left; 
+    width:400px;
+    height:445px;
+    margin:60px;
+}
+
+.item2{
+    position:relative;
+    float:left; 
+    width:400px;
+    height:445px;
+    margin:60px;
+}
+
+.item3{
+    position:relative;
+    float:left; 
+    width:400px;
+    height:445px;
+    margin:60px;
+}
+
+.item4{
+    position:relative;
+    float:left; 
+    width:251px;
+    height:451px;
+    margin:60px;
+}
+
+.item5{
+    position:relative;
+    float:left; 
+    width:251px;
+    height:451px;
+    margin:60px;
+}
+
+.item6{
+    position:relative;
+    float:left; 
+    width:251px;
+    height:451px;
+    margin:60px;
+}
+
