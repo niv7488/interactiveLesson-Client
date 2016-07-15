@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="DesToolsApp">
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../include/style.css">
+
+  <!-- SCRIPTS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+  <div id="popup" class="invisible">
+    <h3>Add Activity</h3>
+    <a>
+      <img src="../images/QECIcon.png">
+      <p>Open Ended Questions</p>
+    </a>
+    <a ng-click="MCbutton()">
+      <img src="../images/MCpopup.png">
+      <p>Multiple Choice Questions</p>
+    </a>
+    <a>
+      <img src="../images/CBIcon.png">
+      <p>Copy</p><p>Bomb</p>
+    </a>
+  </div>
+  <nav class="navbar navbar-default">
+    <!--<div class="container">-->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/"></a>
+      </div>
+
+      <ul class="nav navbar-nav">
+        <div class="bottonMain"></div>
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <!--<li><a href="index.html"><i></i> Main Page</a></li>
+        <li><a href="#about"><i></i> Create new lesson</a></li>
+        <li><a href="#contact"><i></i> Progress</a></li>-->
+      </ul>
+    <!--</div>-->
+  </nav>
+
+  <div id="main">
+  <div class="headerTitle"><div class="headerTitle"><img src="../images/LessonDesignToolsTitle.png"></div>
+  <a ng-click="deleteAct()"><div class="item4 "><img src="../images/DeleteActivityIcon.png"></div></a></div>
+  <a ng-click="popupClick()"><div class="item4 "><img src="../images/addActivityIcon.png"></div></a></div>
+    
+    <div class="wrapper">
+      <section id="box4_L2"><input type="file"></section>
+      <section id="SelectedIcons">
+      <a class="nonexistent" id="mcIcon" href="../MultipleQuestions/MultipleQuestions.html">
+        <img src="../images/mcSmall.png">
+      </a>
+      </section>
+    </div>
+    
+  </div>
+  <section id="meLessonIcon"></section>
+  <section id="SaveLessonIcon"></section
+  <footer class="text-center">
+
+  <script src="app.js"></script>
+</body>
+
+</html>

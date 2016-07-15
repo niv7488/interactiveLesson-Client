@@ -4,6 +4,8 @@
 <html>
 
 <head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- SCROLLS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
@@ -18,30 +20,37 @@
 <body ng-controller="mainController">
 
   <nav class="navbar navbar-default">
-    <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="/"></a>
       </div>
 
       <ul class="nav navbar-nav">
-        <li><a href="index.html"><i></i> Main Page</a></li>
+        <div class="bottonMain"></div>
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <!--<li><a href="index.html"><i></i> Main Page</a></li>
         <li><a href="#about"><i></i> Create new lesson</a></li>
-        <li><a href="#contact"><i></i> Progress</a></li>
+        <li><a href="#contact"><i></i> Progress</a></li>-->
       </ul>
-    </div>
   </nav>
 
   <div id="main">
+  <div class="headerTitle"><div class="headerTitle"><img src="images/LessonDesignTitle.png"></div>
+  <a href="createNewLesson/newLesson.html"><div class="item4 "><img src="images/myLessonIcon.png"></div></a></div>
+  
     <div class="wrapper">
-      <a href="createNewLesson/newLesson.html"><div class="item4"><img src="images/4.jpg"></div></a>
+
+      <a href="LessonDesignTools/LessonDesignTools.html"><div class="item1 box2"><img src="images/LessonDesignToolds.png"><img src="images/LDWords.png"></div></a>
     
-      <a href="Keywords/Keywords.html"><div class="item5"><img src="images/5.jpg"></div></a>
+      <a href="index.html"><div class="item2 box2"><img src="images/Badges.png"><img src="images/BDWords.png"></div></a>
     
-      <a href="MultipleQuestions/MultipleQuestions.html"><div class="item6"><img src="images/6.jpg"></div></a>
+      <a href="index.html"><div class="item2 box2"><a id ="Kwords"><img src="images/KeywordsCreator.png"><img src="images/KWords.png"></a></div></a>
+
     
     </div>
     <!-- angular templating -->
-		<!-- this is where content will be injected -->
+    <!-- this is where content will be injected -->
     <!--<div ng-view></div> -->
     
   </div>

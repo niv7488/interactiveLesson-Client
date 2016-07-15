@@ -10,7 +10,9 @@ validationApp.controller('mainController', ['$scope', '$http', function($scope, 
 		// check to make sure the form is completely valid
 		if (isValid) { 
             console.log(isValid);
-            var encodedString = 'subject=' +
+            var encodedString = 'id=' +
+                encodeURIComponent($scope.user.id) +
+                '&subject=' +
                 encodeURIComponent($scope.user.subject) +
                 '&grade=' +
                 encodeURIComponent($scope.user.grade)+
