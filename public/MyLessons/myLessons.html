@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!-- define angular app -->
-<html>
+<html ng-app="DesToolsApp">
 
 <head>
 
@@ -9,7 +9,8 @@
   <!-- SCROLLS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
-  <link rel="stylesheet" type="text/css" href="include/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../include/style.css">
 
   <!-- SCRIPTS -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
@@ -18,8 +19,8 @@
 
 <!-- define angular controller -->
 <body ng-controller="mainController">
-
- <header>
+  
+<header>
         <a href="index.html" class="bottonMain"></a>
         <a href="#"class="one"></a>
         <a href="#" class="two"></a>
@@ -28,27 +29,19 @@
 </header>
 
   <div id="main">
-  <div class="headerTitle"><div class="headerTitle"><img src="images/LessonDesignTitle.png"></div>
-  <a href="MyLessons/myLessons.html"><div class="item4 "><img src="images/myLessonIcon.png"></div></a></div>
-  
+  <div class="headerTitle"><div class="headerTitle"><img src="../images/myLessonsTitle.png"></div>
     <div class="wrapper">
-
-      <a href="LessonDesignTools/LessonDesignTools.html"><div class="item1 box2"><img src="images/LessonDesignToolds.png"><img src="images/LDWords.png"></div></a>
-    
-      <a href="#"><div class="item2 box2"><img src="images/Badges.png"><img src="images/BDWords.png"></div></a>
-    
-      <a href="Keywords/Keywords.html"><div class="item2 box2"><a id ="Kwords"><img src="images/KeywordsCreator.png"><img src="images/KWords.png"></a></div></a>
-
-    
+      <section class="box4_myLessons" ng-repeat = "pic in model.lessons">
+        <img width=300 height=300 ng-src = "http://interactive-lesson.herokuapp.com/images/{{pic.presentationUrl}}">
+      </section>
+      
     </div>
-    <!-- angular templating -->
-    <!-- this is where content will be injected -->
-    <!--<div ng-view></div> -->
     
   </div>
-  
+  <section id="SaveLessonIcon" ng-click="saveLesson()"></section>
   <footer class="text-center">
-  
+
+  <script src="app.js"></script>
 </body>
 
 </html>
