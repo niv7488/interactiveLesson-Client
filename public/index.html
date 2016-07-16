@@ -9,7 +9,7 @@
     <script src="include/LoginScript.js"></script>
 </head>
 <body ng-app="postExample" ng-controller="PostController as postCtrl">
-<nav class="navbar navbar-default">
+<!-- <nav class="navbar navbar-default">
       <div class="navbar-header">
         <a class="navbar-brand" href="/"></a>
       </div>
@@ -19,18 +19,28 @@
         <div class="one"></div>
         <div class="two"></div>
         <div class="three"></div>
-        <!--<li><a href="index.html"><i></i> Main Page</a></li>
+        <li><a href="index.html"><i></i> Main Page</a></li>
         <li><a href="#about"><i></i> Create new lesson</a></li>
-        <li><a href="#contact"><i></i> Progress</a></li>-->
+        <li><a href="#contact"><i></i> Progress</a></li>
       </ul>
-  </nav>
+  </nav> -->
+
+<header>
+        <a href="index.html" class="bottonMain"></a>
+        <a href="#"class="one"></a>
+        <a href="#" class="two"></a>
+        <a href="#"class="three"></a>
+        <div id = "clear"> </div>
+</header>
+
+
 <div class="container">
     <!-- =================================================================== -->
     <!-- FORM ============================================================== -->
     <!-- =================================================================== -->
     <div class="formDesign">
     <!-- PAGE HEADER -->
-        <div class="page-header"><h2>Please sign in</h2></div>
+        <div class="page-header">Please sign in</div>
         <!-- pass in the variable if our form is valid or invalid -->
         <form class="login-form" ng-submit="postCtrl.postForm()">
         
@@ -38,11 +48,11 @@
         <input type="number" id="inputUsername" class="form-control" placeholder="ID" required autofocus ng-model="postCtrl.inputData.id">
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required ng-model="postCtrl.inputData.pass">
-    <br>
-    <div class="alert alert-danger" role="alert" ng-show="errorMsg">{{errorMsg}}</div>
+        <br>
+        <div class="alert alert-danger" role="alert" ng-show="errorMsg">{{errorMsg}}</div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     
-      </form>
+        </form>
     </div>
 
     

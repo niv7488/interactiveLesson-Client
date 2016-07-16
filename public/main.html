@@ -19,33 +19,22 @@
 <!-- define angular controller -->
 <body ng-controller="mainController">
 
-  <nav class="navbar navbar-default">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/"></a>
-      </div>
-
-      <ul class="nav navbar-nav">
-        <div class="bottonMain"></div>
-        <div class="one"></div>
-        <div class="two"></div>
-        <div class="three"></div>
-        <!--<li><a href="index.html"><i></i> Main Page</a></li>
-        <li><a href="#about"><i></i> Create new lesson</a></li>
-        <li><a href="#contact"><i></i> Progress</a></li>-->
-      </ul>
-  </nav>
+<header>
+        <a href="index.html" class="bottonMain"></a>
+        <a href="#"class="one"></a>
+        <a href="#" class="two"></a>
+        <a href="#"class="three"></a>
+        <div id = "clear"> </div>
+</header>
 
   <div id="main">
     <div class="wrapper">
 
-      <a href="createNewLesson/newLesson.html"><div class="item1 box"><img src="images/CreateNewLesson.png"></div></a>
-    
-      <a href="index.html"><div class="item2 box"><img src="images/myLessons.png"></div></a>
-    
-      <a href="index.html"><div class="item3 box"><img src="images/Review.png"></div></a>
+      <div class="category"> <a href="createNewLesson/newLesson.html" class="hrefCategory" id="pic1"></a></div>
+      <div class="category"> <a href="index.html" class="hrefCategory" id="pic2"></a></div>
+      <div class="category"> <a href="index.html" class="hrefCategory" id="pic3"></a></div>
+      <div class="category"> <a href="index.html" class="hrefCategory" id="pic4"></a></div>
 
-      <a href="index.html"><div class="item3 box"><img src="images/Inbox.png"></div></a>
-    
     </div>
     <!-- angular templating -->
 		<!-- this is where content will be injected -->
