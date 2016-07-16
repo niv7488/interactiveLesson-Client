@@ -4,6 +4,8 @@
 <html>
 
 <head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- SCROLLS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
@@ -18,26 +20,31 @@
 <body ng-controller="mainController">
 
   <nav class="navbar navbar-default">
-    <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="/"></a>
       </div>
 
       <ul class="nav navbar-nav">
-        <li><a href="index.html"><i></i> Main Page</a></li>
+        <div class="bottonMain"></div>
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <!--<li><a href="index.html"><i></i> Main Page</a></li>
         <li><a href="#about"><i></i> Create new lesson</a></li>
-        <li><a href="#contact"><i></i> Progress</a></li>
+        <li><a href="#contact"><i></i> Progress</a></li>-->
       </ul>
-    </div>
   </nav>
 
   <div id="main">
     <div class="wrapper">
-      <a href="createNewLesson/newLesson.html"><div class="item1"><img src="images/1.jpg"></div></a>
+
+      <a href="createNewLesson/newLesson.html"><div class="item1 box"><img src="images/CreateNewLesson.png"></div></a>
     
-      <a href="index.html"><div class="item2"><img src="images/2.jpg"></div></a>
+      <a href="index.html"><div class="item2 box"><img src="images/myLessons.png"></div></a>
     
-      <a href="index.html"><div class="item3"><img src="images/3.jpg"></div></a>
+      <a href="index.html"><div class="item3 box"><img src="images/Review.png"></div></a>
+
+      <a href="index.html"><div class="item3 box"><img src="images/Inbox.png"></div></a>
     
     </div>
     <!-- angular templating -->

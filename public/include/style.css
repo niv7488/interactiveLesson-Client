@@ -11,59 +11,259 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-
-
-.wrapper{
-    overflow:hidden; /*make sure the wrapper has no dimension*/
-    margin-bottom:10px;
-    ;
+.page-header{
+    margin-top:30px;
+    margin-left:30px;
+    font-style: bold;
 }
 
+.page-header p{
+    float:right;
+}
+.btn, .btn-primary{
+    display: block;
+    margin: 0px auto;
+}
+
+.wrapper{
+    overflow:hidden; 
+    margin-bottom:10px;
+    text-align: center;;
+    margin-top: 100px;
+}
+
+.wrapper section{
+    float:left;
+    margin-left: 30px;
+}
+
+.wrapper section input{
+    margin-left: 305px;
+    margin-top: 245px;
+}
+
+.navbar-default{
+    background-color: #515664;
+}
+.nav, .navbar-nav{
+    float:right;
+}
+
+.bottonMain{
+    background-image: url("../images/iconForMain.png");
+    width:46px;
+    height: 46px;
+    float: right;
+    margin-left: 80%;
+    margin-right: 15px;
+}
+.one{
+    background-image: url("../images/2.png");
+    width:31px;
+    height: 42px;
+    margin-left:10px;
+    position: absolute;
+    left:16px;
+}
+.two{
+    background-image: url("../images/3.png");
+    width:42px;
+    height: 41px;
+    margin-left:10px;
+    position: absolute;
+    left:50px;
+}
+.three{
+    background-image: url("../images/4.png");
+    width:27px;
+    height: 34px;
+    margin-top: 5px;
+    margin-left:10px;
+    position: absolute;
+    left:92px;
+}
 .item1{
-    position:relative;
-    float:left; 
-    width:400px;
-    height:445px;
+    
+    
     margin:60px;
 }
 
 .item2{
-    position:relative;
-    float:left; 
-    width:400px;
-    height:445px;
+     
     margin:60px;
 }
 
 .item3{
-    position:relative;
-    float:left; 
-    width:400px;
-    height:445px;
     margin:60px;
 }
-
-.item4{
-    position:relative;
-    float:left; 
-    width:251px;
-    height:451px;
-    margin:60px;
+.headerTitle{
+    margin:25px;
+    display: inline;
 }
 
-.item5{
-    position:relative;
-    float:left; 
-    width:251px;
-    height:451px;
-    margin:60px;
+.item4{ 
+     
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+    float: right;
+    margin-right: 10%;
+
+}
+.item4 img{
+    display: inline;
+}
+.item2, .box2 a{
+    margin-bottom: 200px;
+}
+.box{
+
+    display: inline-block;
+    max-width:400px;
+    width:95%;
+    margin:2.5% 10px;
+    height:auto;
 }
 
-.item6{
-    position:relative;
-    float:left; 
-    width:251px;
-    height:451px;
-    margin:60px;
+.box img{
+
+    width:90%;
+    height:auto;
+    margin:auto;
+
 }
 
+.box2{
+
+    display: inline-block;
+    max-width:400px;
+    width:95%;
+    margin:2.5% 10px;
+    height:auto;
+}
+
+.box2 img{
+
+    width:70%;
+    height:auto;
+    margin:auto;
+
+}
+
+.formDesign {
+    background-color: #f0f1f1;
+    border-radius: 30px;
+    box-shadow: 10px 10px 5px #888888;
+    border-style: solid;
+    border-color: #000000 #000000;
+    height:450px;
+    width:737px;
+    border-color: bold;
+    padding: 5px 170px;
+}
+.form-control{
+    width:75%;
+    float: right;
+}
+.lableDes {
+    max-width: 800px;
+    width:250px;
+    text-align: center;
+
+}
+.form-group label{width:400px; font-weight: bolder;} 
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+#box4_L2{
+    width: 700px;
+    height: 524px;
+    background-color: #ffffff;
+    border: 1px solid #010741;
+    bottom: 206px;
+    border-radius: 30px;
+    left: 26px;
+}
+#SelectedIcons{
+    width:300px;
+}
+#meLessonIcon{
+    background-image: url("../images/myLessonIcon2.png");
+    position: absolute;
+    width: 105px;
+    height: 93px;
+    bottom: 89px;
+    left: 1120px;
+}
+
+#SaveLessonIcon{
+    background-image: url("../images/saveLessonIcon.png");
+    position: absolute;
+    width: 112px;
+    height: 88px;
+    bottom: 89px;
+    left: 981px;
+}
+
+#popup{
+    width: 615px;
+    height: 360px;
+    background-color: #f0f1f1;
+    position: absolute;
+    left: 803px;
+    top: 239px;
+    border-radius: 15px;
+    border-color: #808285;
+    border-style: solid;
+    transition: 1s;
+}
+.invisible{
+    opacity: 0;
+}
+
+.nonexistent{
+    display:none;
+}
+
+
+#popup h3{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 28px;
+    margin-top: 12px;
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+
+#popup a{
+    float:left;
+    width:180px;
+    display: block;
+    margin-left: 22px;
+
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#popup a p{
+    font-size:24px;
+    width:100%;
+    color:#000000;
+    text-align: center;
+    font-weight: bold;
+    margin:0px;
+    text-decoration: none;
+}
+
+#popup img{
+    margin-bottom: 17px;
+}
+
+.clear{
+    clear:both;
+}
