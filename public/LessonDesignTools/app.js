@@ -1,29 +1,19 @@
 // create angular app
 var DesToolsApp = angular.module('DesToolsApp', []);
+var formData = new FormData();
+DesToolsApp.directive('fileFormAppend', function () {
+    return {
+        restrict: 'A',
+        scope: true,
+        link: function (scope, element, attr) {
 
-DesToolsApp.directive("ngFileSelect",function(){    
-  return {
-    link: function($scope,el){          
-      el.bind("change", function(e){          
-        var f = (e.srcElement || e.target).files[0];
-        var reader = new FileReader();
-        // Closure to capture the file information.
-        reader.onload = (function(theFile) {
-            console.log("here");
-            return function(e) {
-                console.log(e);
-              // Render thumbnail.
-              $scope.file = e.target.result;
-              //$scope.getFile();
-            };
-        })(f);
+            element.bind('change', function () {
+                formData.append('image', element[0].files[0]);
+                
+            });
 
-        // Read in the image file as a data URL.
-        reader.readAsDataURL(f);
-        
-      });          
-    }        
-  }
+        }
+    };
 });
 
 // create angular controller
@@ -45,6 +35,31 @@ DesToolsApp.controller('mainController', ['$scope', '$http', function($scope, $h
        if(!$("#mcIcon").hasClass("nonexistent")){
             $("#mcIcon").toggleClass("nonexistent");
         } 
+    }
+    $scope.saveLesson = function() {
+        var tmp = $("#lessonId").val();
+        console.log(tmp);
+        formData.append("id",tmp);
+        $http({
+                method: 'POST',
+                //url: 'http://interactive-lesson.herokuapp.com/updateLesson',
+                url: 'http://localhost:3000/updateLesson',
+                data: formData,
+                transformRequest: angular.identity,
+                headers: {'Content-Type': undefined}
+            })
+            .success(function(data, status, headers, config) {
+                console.log(data);
+                if(data.success == true) {
+                    window.location.href = '../LessonOptions.html';
+                }
+                else{
+                    $scope.errorMsg = "Details of Q&A are not correct";
+                }
+            })
+            .error(function(data, status, headers, config) {
+                $scope.errorMsg = 'Unable to submit form';
+            })
     }
     $("#fileSelector").change(handleFileSelect);
 }]);
