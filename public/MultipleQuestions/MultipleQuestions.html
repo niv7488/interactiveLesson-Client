@@ -63,6 +63,15 @@
                 </label>
                 <p ng-show="userForm.Answer3.$invalid && !userForm.Answer3.$pristine" class="help-block">Your name is required.</p>
             </div>
+
+            <!-- Answer4 -->
+            <div class="form-group" ng-class="{ 'has-error' : userForm.Answer4.$invalid && !userForm.Answer4.$pristine }">
+                <label class:"lableDes">Answer4: <input type="text" name="Answer4" class="form-control" ng-model="user.Answer4" required>
+                    <input type="checkbox">
+                </label>
+                <p ng-show="userForm.Answer4.$invalid && !userForm.Answer4.$pristine" class="help-block">Your name is required.</p>
+            </div>
+
             <div class="alert alert-danger" role="alert" ng-show="errorMsg">{{errorMsg}}</div>
             <button type="submit" class="btn btn-primary">Save</button>
             

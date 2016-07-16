@@ -6,22 +6,27 @@ validationApp.controller('mainController', ['$scope', '$http', function($scope, 
     
     // function to submit the form after all validation has occurred            
     $scope.submitForm = function(isValid) {
-
+        var correct1 = true;
+        var correct2 = false;
+        var correct3 = false;
+        var correct4 = false;
         // check to make sure the form is completely valid
         if (isValid) { 
             console.log(isValid);
             var encodedString = 'Question=' +
                 encodeURIComponent($scope.user.Question) +
                 '&Answer1=' +
-                encodeURIComponent($scope.user.Answer1)+
+                encodeURIComponent($scope.user.Answer1)+ correct1 +
                 '&Answer2=' + 
-                encodeURIComponent($scope.user.Answer2)+
+                encodeURIComponent($scope.user.Answer2)+ correct2 +
                 '&Answer3=' +
-                encodeURIComponent($scope.user.Answer3);
+                encodeURIComponent($scope.user.Answer3)+ correct3 +
+                '&Answer4=' +
+                encodeURIComponent($scope.user.Answer4) + correct4;
 
             $http({
                 method: 'POST',
-                url: 'http://interactive-lesson.herokuapp.com/createLesson',
+                url: 'http://interactive-lesson.herokuapp.com/createMultipleChoice',
                 data: encodedString,
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             })
