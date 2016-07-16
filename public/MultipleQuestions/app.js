@@ -21,7 +21,7 @@ validationApp.controller('mainController', ['$scope', '$http', function($scope, 
 
             $http({
                 method: 'POST',
-                url: 'http://interactive-lesson.herokuapp.com/createLesson',
+                url: 'http://interactive-lesson.herokuapp.com/createMultipleChoice',
                 data: encodedString,
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             })
