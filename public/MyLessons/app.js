@@ -20,9 +20,7 @@ DesToolsApp.controller('mainController', ['$scope', '$http', function($scope, $h
             .error(function(data, status, headers, config) {
                 $scope.errorMsg = 'Unable to submit form';
             })
-   $scope.saveLesson = function() {
-        
-    }
+
 }]);
 
 
