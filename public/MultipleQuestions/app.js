@@ -6,10 +6,11 @@ validationApp.controller('mainController', ['$scope', '$http', function($scope, 
     
     // function to submit the form after all validation has occurred            
     $scope.submitForm = function(isValid) {
-        var correct1 = true;
-        var correct2 = false;
-        var correct3 = false;
-        var correct4 = false;
+        var correct1 = $("#ans1").is(':checked');
+        var correct2 = $("#ans2").is(':checked');
+        var correct3 = $("#ans3").is(':checked');
+        var correct4 = $("#ans4").is(':checked');
+        console.log(correct1 + " " + correct2 + " " + correct3 + " " + correct4)
         // check to make sure the form is completely valid
         if (isValid) { 
             console.log(isValid);
@@ -33,7 +34,7 @@ validationApp.controller('mainController', ['$scope', '$http', function($scope, 
             .success(function(data, status, headers, config) {
                 console.log(data);
                 if(data.success == true) {
-                    window.location.href = '../LessonOptions.html';
+                    //window.location.href = '../LessonOptions.html';
                 }
                 else{
                     $scope.errorMsg = "Details of Q&A are not correct";

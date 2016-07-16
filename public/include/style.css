@@ -201,6 +201,8 @@
     bottom: 206px;
     border-radius: 30px;
     left: 26px;
+    overflow: hidden;
+
 }
 #SelectedIcons{
     width:300px;
