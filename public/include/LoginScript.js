@@ -3,14 +3,16 @@ angular.module('postExample', [])
         
         this.postForm = function() {
         
-            var encodedString = 'username=' +
-                encodeURIComponent(this.inputData.username) +
-                '&password=' +
-                encodeURIComponent(this.inputData.password);
+            var encodedString = 'id=' +
+                encodeURIComponent(this.inputData.id) +
+                '&pass=' +
+                encodeURIComponent(this.inputData.pass);
                 
             $http({
-                method: 'GET',
-                url: 'http://interactive-lesson.herokuapp.com/teacherLogin/'+ this.inputData.username + '/' + this.inputData.password
+                method: 'POST',
+                url: 'http://interactive-lesson.herokuapp.com/teacherLogin',
+                data: encodedString,
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             })
             .success(function(data, status, headers, config) {
                 console.log(data);

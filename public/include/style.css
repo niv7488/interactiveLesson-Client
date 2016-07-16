@@ -17,6 +17,16 @@
     font-style: bold;
 }
 
+.page-header h2{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 28px;
+    margin-top: 45px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+}
+
 .page-header p{
     float:right;
 }
@@ -24,7 +34,13 @@
     display: block;
     margin: 0px auto;
 }
-
+.btn-block {
+    display: block;
+    width: 75%;
+    padding-right: 0;
+    padding-left: 0;
+    float: right;
+}
 .wrapper{
     overflow:hidden; 
     margin-bottom:10px;
@@ -185,6 +201,8 @@
     bottom: 206px;
     border-radius: 30px;
     left: 26px;
+    overflow: hidden;
+
 }
 #SelectedIcons{
     width:300px;
@@ -267,3 +285,4 @@ a:hover {
 .clear{
     clear:both;
 }
+

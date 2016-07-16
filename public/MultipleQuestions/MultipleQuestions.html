@@ -4,6 +4,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../include/style.css">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <!-- JS -->
     <script src="https://code.angularjs.org/1.4.0-rc.1/angular.js"></script>
     <script src="app.js"></script>
@@ -43,7 +44,7 @@
             <!-- Answer1 -->
             <div class="form-group" ng-class="{ 'has-error' : userForm.Answer1.$invalid && !userForm.Answer1.$pristine }">
                 <label class:"lableDes">Answer1: <input type="text" name="Answer1" class="form-control" ng-model="user.Answer1" required>
-                    <input type="checkbox">
+                    <input type="checkbox" id= "ans1">
                 </label>
                 <p ng-show="userForm.Answer1.$invalid && !userForm.Answer1.$pristine" class="help-block">Your name is required.</p>
             </div>
@@ -51,7 +52,7 @@
             <!-- Answer2 -->
             <div class="form-group" ng-class="{ 'has-error' : userForm.Answer2.$invalid && !userForm.Answer2.$pristine }">
                 <label class:"lableDes">Answer2: <input type="text" name="Answer2" class="form-control" ng-model="user.Answer2" required>
-                    <input type="checkbox">
+                    <input type="checkbox" id = "ans2">
                 </label>
                 <p ng-show="userForm.Answer2.$invalid && !userForm.Answer2.$pristine" class="help-block">Your name is required.</p>
             </div>
@@ -59,10 +60,19 @@
             <!-- Answer3 -->
             <div class="form-group" ng-class="{ 'has-error' : userForm.Answer3.$invalid && !userForm.Answer3.$pristine }">
                 <label class:"lableDes">Answer3: <input type="text" name="Answer3" class="form-control" ng-model="user.Answer3" required>
-                    <input type="checkbox">
+                    <input type="checkbox" id="ans3">
                 </label>
                 <p ng-show="userForm.Answer3.$invalid && !userForm.Answer3.$pristine" class="help-block">Your name is required.</p>
             </div>
+
+            <!-- Answer4 -->
+            <div class="form-group" ng-class="{ 'has-error' : userForm.Answer4.$invalid && !userForm.Answer4.$pristine }">
+                <label class:"lableDes">Answer4: <input type="text" name="Answer4" class="form-control" ng-model="user.Answer4" required>
+                    <input type="checkbox" id="ans4">
+                </label>
+                <p ng-show="userForm.Answer4.$invalid && !userForm.Answer4.$pristine" class="help-block">Your name is required.</p>
+            </div>
+
             <div class="alert alert-danger" role="alert" ng-show="errorMsg">{{errorMsg}}</div>
             <button type="submit" class="btn btn-primary">Save</button>
             
