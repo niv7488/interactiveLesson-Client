@@ -349,3 +349,7 @@ a:hover {
 #pic4{
     background: url(../images/IN.png) no-repeat;
 }
+#lessonId{
+    position: relative;
+    top:80px;left:55px;
+}
