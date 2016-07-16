@@ -42,8 +42,7 @@ DesToolsApp.controller('mainController', ['$scope', '$http', function($scope, $h
         formData.append("id",tmp);
         $http({
                 method: 'POST',
-                //url: 'http://interactive-lesson.herokuapp.com/updateLesson',
-                url: 'http://localhost:3000/updateLesson',
+                url: 'http://interactive-lesson.herokuapp.com/updateLesson',
                 data: formData,
                 transformRequest: angular.identity,
                 headers: {'Content-Type': undefined}
