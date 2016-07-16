@@ -34,7 +34,7 @@ validationApp.controller('mainController', ['$scope', '$http', function($scope, 
             .success(function(data, status, headers, config) {
                 console.log(data);
                 if(data.success == true) {
-                    //window.location.href = '../LessonOptions.html';
+                    window.location.href = '../LessonOptions.html';
                 }
                 else{
                     $scope.errorMsg = "Details of Q&A are not correct";
