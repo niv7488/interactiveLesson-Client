@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="ListApp">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- SCROLLS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./include/RPstyle.css">
+        <link rel="stylesheet" type="text/css" href="ministyle.css">
+
+        <!-- SCRIPTS -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+
+    </head>
+
+    <!-- define angular controller -->
+    <body ng-controller="mainController">
+        <header>
+            <a href="index.html" class="bottonMain"></a>
+            <a href="#" class="one"></a>
+            <a href="#" class="two"></a>
+            <a href="#" class="three"></a>
+            <div id = "clear"></div>
+        </header>
+        <aside>
+            <section>
+                <img src="../images/icons/bars.png">
+                <label>Progress Review</label>
+            </section>
+            <section id="searchBlock">
+                <label>Search</label>
+                <img src="../images/icons/searchIcon.png">
+                <div>
+                    <section>
+                        <label>Lesson Title:</label>
+                        <label>Date:</label>
+                        <label>Subject:</label>
+                        <label>Grade:</label>
+                    </section>
+                    <section>
+                        <select id="sLessonTitle">
+                            <option>Dunno</option>
+                        </select>
+                        <div class="clear"></div>
+                        <select id="sData">
+                            <option>Tomorrow</option>
+                        </select>
+                        <div class="clear"></div>
+                        <select id="sSubject">
+                            <option>Somthing</option>
+                        </select>
+                        <div class="clear"></div>
+                        <select id="sGrade">
+                            <option>50?</option>
+                        </select>
+                        <div class="clear"></div>
+                    </section>
+                    <div class="clear"></div>
+                </div>
+            </section>
+            <!--<div id='courseSelect'>
+                <input type="text">
+                <button ng-click="presentStudents">Present</button>
+            </div>-->
+            <section id="attendenceBlock">
+                <label>Student attendence: </label>
+                <output id="attendence">13</output>
+                <div id="legend">
+                    <div class="red"></div>
+                    <label>0-49</label>
+                    <div class="yellow"></div>
+                    <label>50-74</label>
+                    <div class="green"></div>
+                    <label>75-100</label>
+                    <div class="blue"></div>
+                    <label>Did not participate</label>
+                </div>
+                <div id="performance" >
+                    <div>81</div>
+                    <label>Class Performance</label>
+                </div>
+            </section>
+        </aside>
+        <main>
+            <div id="arrows">
+                <img src="../images/icons/arrowLeft.png">
+                <img src="../images/icons/arrowRight.png">
+            </div>
+            <table>
+                <tr>
+                    <td></td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <div>
+                            <img src="../images/icons/MCIcon.png">
+                            <label>Multiple Choice Question</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="../images/icons/SAIcon.png">
+                            <label>Sharing Activities</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="../images/icons/HSIIcon.png">
+                            <label>Hot Spot Images</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="../images/icons/MAIcon.png">
+                            <label>Matching Activity</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="../images/icons/CBIcon.png">
+                            <label>Copy Bomb</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="../images/icons/SqAIcon.png">
+                            <label>Sequence Activity</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="../images/icons/VQIcon.png">
+                            <label>Video Questions</label>
+                        </div>
+                    </td>
+                    <td>
+                        
+                    </td>
+
+                </tr>
+                <!-- SINGLE STUDENT BLOCK, REPEAT FOR MULTIPLE -->
+                <tr ng-repeat="student in model.students">
+                    <td class="studentName">
+                        <img ng-src="../images/icons/{{student.gender}}.png">
+                        <label>{{student.name}}</label>
+                    </td>
+                    <td>
+                        <img ng-src="../images/smilies/{{student.mood}}.png">
+                    </td>
+                    <td class="{{determinColor(student.grades[0])}}"></td>
+                    <td class="{{determinColor(student.grades[1])}}"></td>
+                    <td class="{{determinColor(student.grades[2])}}"></td>
+                    <td class="{{determinColor(student.grades[3])}}"></td>
+                    <td class="{{determinColor(student.grades[4])}}"></td>
+                    <td class="{{determinColor(student.grades[5])}}"></td>
+                    <td class="{{determinColor(student.grades[6])}}"></td>
+                    <td>
+                        <img src="../images/icons/mailIcon.png">
+                    </td>
+                </tr>
+                <tr ng-hide="model.students.length > 0">
+                    <td class="studentName">
+                        <img src="../images/icons/boy.png">
+                        <label>none</label>
+                    </td>
+                    <td>
+                        <img src="../images/smilies/happy.png">
+                    </td>
+                    <td class="blue"></td>
+                    <td class="blue"></td>
+                    <td class="blue"></td>
+                    <td class="blue"></td>
+                    <td class="blue"></td>
+                    <td class="blue"></td>
+                    <td class="blue"></td>
+                    <td>
+                        <img src="../images/icons/mailIcon.png">
+                    </td>
+                </tr>
+            </table>
+        </main>
+        <footer>
+        </footer>
+        <script src="app.js"></script>
+    </body>
+</html>
