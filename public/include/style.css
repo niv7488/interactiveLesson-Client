@@ -209,6 +209,17 @@ body {
     overflow: hidden;
 
 }
+
+.box4_myLessons{
+   
+    background-color: #ffffff;
+    border: 1px solid #010741;
+    bottom: 206px;
+    border-radius: 30px;
+    left: 26px;
+    overflow: hidden;
+
+}
 #SelectedIcons{
     width:300px;
 }
@@ -331,6 +342,7 @@ a:hover {
 #pic4{
     background: url(../images/IN.png) no-repeat;
 }
+<<<<<<< HEAD
 
 #itemL1{
     background: url(../images/LessonDesignToolds.png) no-repeat;
@@ -385,3 +397,9 @@ a:hover {
     clear:both;
 }
 
+=======
+#lessonId{
+    position: relative;
+    top:80px;left:55px;
+}
+>>>>>>> origin/master
