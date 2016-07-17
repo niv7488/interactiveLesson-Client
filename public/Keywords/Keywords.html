@@ -3,7 +3,7 @@
 <head>
     <!-- CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../include/style.css">
     <!-- JS -->
     <script src="https://code.angularjs.org/1.4.0-rc.1/angular.js"></script>
     <script src="app.js"></script>
@@ -18,7 +18,7 @@
 </header>
 
 <div class="container">
-    
+  <div class="formDesign" id="keyWordDes">  
     <!-- PAGE HEADER -->
     <div class="page-header"><h1>Key Words</h1></div>
    
@@ -31,27 +31,27 @@
 
         <!-- Keyword -->
         <div class="form-group" ng-class="{ 'has-error' : userForm.Keyword.$invalid && !userForm.Keyword.$pristine }">
-            <label>Keyword</label>
-            <input type="text" name="Keyword" class="form-control" ng-model="user.Keyword" ng-minlength="1" ng-maxlength="25">
+            <label class="lableDes">Keyword</label>
+            <input type="text" name="Keyword" class="form-control form-control-lesson" ng-model="user.Keyword" ng-minlength="1" ng-maxlength="25">
             <p ng-show="userForm.Keyword.$error.minlength" class="help-block">Keyword is too short.</p>
             <p ng-show="userForm.Keyword.$error.maxlength" class="help-block">Keyword is too long.</p>
         </div>
         
         <!-- RelativeWord1 -->
         <div class="form-group" ng-class="{ 'has-error' : userForm.Description.$invalid && !userForm.Description.$pristine }">
-            <label>Description</label>
-            <input type="text" name="Description" class="form-control" ng-model="user.Description" ng-minlength="1" ng-maxlength="25">
-            <p ng-show="userForm.Description.$error.minlength" class="help-block">Description is too short.</p>
-            <p ng-show="userForm.Description.$error.maxlength" class="help-block">Description is too long.</p>
+            <label class="lableDes">Description</label>
+            <textarea rows="9" cols="50" type="text" name="Description" class="form-control form-control-lesson"  ng-model="user.Description" ></textarea>
+            <!-- <p ng-show="userForm.Description.$error.minlength" class="help-block">Description is too short.</p>
+            <p ng-show="userForm.Description.$error.maxlength" class="help-block">Description is too long.</p> -->
         </div>
 
         <div class="alert alert-danger" role="alert" ng-show="errorMsg">{{errorMsg}}</div>
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary btn-new">Save</button>
            
         
     </form>
     
-  
+  </div>
 </div>
 </body>
 </html>
