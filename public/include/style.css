@@ -172,7 +172,7 @@ body {
     height:264px;
 }
 #lesson{
-    height:400px;
+    height:450px;
 }
 
 .userForm{
@@ -230,22 +230,27 @@ body {
 }
 #meLessonIcon{
     background-image: url("../images/myLessonIcon2.png");
-    position: relative;
     width: 105px;
     height: 93px;
     bottom: 89px;
     float: right;
+    position: absolute;
+    margin-left: 65%;
 }
 
 #SaveLessonIcon{
     background-image: url("../images/saveLessonIcon.png");
-    position: relative;
     width: 112px;
     height: 88px;
     bottom: 89px;
     float: right;
+    margin-top: 50%;
+    position: absolute;
+    margin-left: 50%;
 }
-
+.btn-new{
+    width:45%;
+}
 #popup{
     width: 615px;
     height: 360px;
@@ -347,7 +352,7 @@ a:hover {
 #pic4{
     background: url(../images/IN.png) no-repeat;
 }
-<<<<<<< HEAD
+
 
 #itemL1{
     background: url(../images/LessonDesignToolds.png) no-repeat;
