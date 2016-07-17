@@ -7,10 +7,14 @@ div, header, nav, main, section, a {
     display: block;
 }
 
+section{
+    width: 100%;
+}
+
 body {
     font-family: arial;
     color: black;
-    overflow: hidden;
+    overflow: hidden; 
 }
  header{
     height: 50px;
@@ -44,15 +48,6 @@ body {
     margin-top:30px;
 }
 
-/* .page-header h2{
-    text-align: center;
-    font-size: 46px;
-    margin-bottom: 28px;
-    margin-top: 45px;
-    text-decoration: underline;
-    font-weight: bold;
-} */
-}
 
 .page-header p{
     float:right;
@@ -76,6 +71,14 @@ body {
 
 }
 
+.wrapperL{
+    width: 100%;
+    overflow:hidden; 
+    margin-bottom:10px;
+    text-align: center;;
+    margin: 0 auto;
+    margin-top: 150px;
+}
 .wrapper section{
     float:left;
     margin-left: 30px;
@@ -130,75 +133,24 @@ body {
     left: 0.8%;
     margin-top: 8px;
 }
-/* .item1{
-    
-    
-    margin:60px;
-}
 
-.item2{
-     
-    margin:60px;
-}
-
-.item3{
-    margin:60px;
-} */
 .headerTitle{
+    width: 75%;
+    float: left;
     margin:25px;
-    display: inline;
 }
 
-.item4{ 
-     
-    display: inline;
-    margin-right: 20px;
-    position: relative;
+.headerIcon{
+    width: 25%;
     float: right;
-    margin-right: 10%;
-
-}
-.item4 img{
-    display: inline;
-}
-.item2, .box2 a{
-    margin-bottom: 200px;
-}
-/*.box{
-
-    display: inline-block;
-    max-width:400px;
-    width:95%;
-    margin:2.5% 10px;
-    height:auto;
+    margin:25px;
 }
 
-.box img{
+.mainHead{ width: 100%; }
 
-    width:90%;
-    height:auto;
-    margin:auto;
 
-}
- */
-.box2{
 
-    display: inline-block;
-    max-width:400px;
-    width:95%;
-    margin:2.5% 10px;
-    height:auto;
-}
-
-.box2 img{
-
-    width:70%;
-    height:auto;
-    margin:auto;
-
-}
-
-.formDesign {
+.formDesign{
     margin: 0px auto;
     background-color: #f0f1f1;
     border-radius: 30px;
@@ -209,17 +161,38 @@ body {
     width:60%;
     border-color: bold;
 }
+
+#login{
+    height:264px;
+}
+#lesson{
+    height:400px;
+}
+
+.userForm{
+    margin: 0 auto;
+}
+
 .form-control{
     width:75%;
     float: right;
 }
+
+.form-control-lesson{
+    width: 66%;
+    float: left;
+    margin-bottom: 3%;
+}
+
 .lableDes {
-    max-width: 800px;
-    width:250px;
     text-align: center;
 
 }
-.form-group label{width:400px; font-weight: bolder;} 
+.form-group label{
+    width: 25%;
+    float: left;
+    font-weight: bolder;
+} 
 
 .form-group {
     margin-bottom: 10px;
@@ -314,20 +287,29 @@ a:hover {
     margin-bottom: 17px;
 }
 
-.clear{
-    clear:both;
-}
-
-
-
-.category{
+.category {
     float: left;
     position: relative;
     width: 25%;
 }
 
+.LOptions, .Lexplanation{
+    float: left;
+    position: relative;
+    width: 33.3%;
+    margin-bottom: -1%;
+}
 
-.hrefCategory{
+
+
+.hrefCategory, .hrefOptions{
+    display: block;
+    width: 240px;
+    height: 260px;
+    margin: auto;
+}
+
+.hrefExp{
     display: block;
     width: 240px;
     height: 260px;
@@ -349,3 +331,57 @@ a:hover {
 #pic4{
     background: url(../images/IN.png) no-repeat;
 }
+
+#itemL1{
+    background: url(../images/LessonDesignToolds.png) no-repeat;
+}
+
+#itemL2{
+    background: url(../images/Badges.png) no-repeat;
+}
+
+#itemL3{
+    background: url(../images/KeywordsCreator.png) no-repeat;
+}
+
+#explanation1{
+    background: url(../images/LDWords.png) no-repeat;
+}
+
+#explanation2{
+    background: url(../images/BDWords.png) no-repeat;
+}
+
+#explanation3{
+    background: url(../images/KWords.png) no-repeat;
+}
+
+
+#lessOptionsLogo{
+    background: url(../images/Lesson-Options.png) no-repeat;
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+
+#lessOptionsIcon{
+    background: url(../images/myLessonIcon2.png) no-repeat;
+    width: 104px;
+    height: 94px;
+    float: right;
+    margin-right: 1%;
+}
+
+.headLine{
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    margin-left: 10px;
+    position: relative;
+    float: left;
+}
+.clear{
+    clear:both;
+}
+

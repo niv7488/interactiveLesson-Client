@@ -20,42 +20,47 @@
     <!-- =================================================================== -->
     <!-- FORM ============================================================== -->
     <!-- =================================================================== -->
-    <div class="formDesign">
+    <div class="formDesign" id="lesson">
     <!-- PAGE HEADER -->
-        <div class="page-header"><h1>Lesson ID</h1></div>
+        <div class="page-header">Lesson ID</div>
         <!-- pass in the variable if our form is valid or invalid -->
-        <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+        <form name="userForm" class="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
 
             <!-- ID -->
             <div class="form-group" ng-class="{ 'has-error' : userForm.LessonTitle.$invalid && !userForm.id.$pristine }">
-                <label class:"lableDes">ID: <input type="text" name="id" class="form-control" ng-model="user.id" ng-minlength="1" ng-maxlength="5"></label>
+                <label class="lableDes">ID:</label>
+                 <input type="text" name="id" class="form-control form-control-lesson"  ng-model="user.id" ng-minlength="1" ng-maxlength="5">
                 <p ng-show="userForm.id.$error.minlength" class="help-block">Lesson Title is too short.</p>
                 <p ng-show="userForm.id.$error.maxlength" class="help-block">Lesson Title is too long.</p>
             </div>
 
             <!-- Subject -->
             <div class="form-group" ng-class="{ 'has-error' : userForm.subject.$invalid && !userForm.subject.$pristine }">
-                <label class:"lableDes">Subject: <input type="text" name="subject" class="form-control" ng-model="user.subject" required></label>
+                <label class="lableDes">Subject:</label>
+                <input type="text" name="subject" class="form-control form-control-lesson" ng-model="user.subject" required>
                 <p ng-show="userForm.subject.$invalid && !userForm.subject.$pristine" class="help-block">Your name is required.</p>
             </div>
             
             <!-- Grade -->
             <div class="form-group" ng-class="{ 'has-error' : userForm.grade.$invalid && !userForm.grade.$pristine }">
-                <label class:"lableDes">Grade: <input type="number" name="grade" class="form-control" ng-model="user.grade" ng-minlength="1" ng-maxlength="3"></label>
+                <label class="lableDes">Grade: </label>
+                <input type="number" name="grade" class="form-control form-control-lesson" ng-model="user.grade" ng-minlength="1" ng-maxlength="3">
                 <p ng-show="userForm.grade.$error.minlength" class="help-block">There is no possibility for such grade.</p>
                 <p ng-show="userForm.grade.$error.maxlength" class="help-block">There is no possibility for such grade.</p>
             </div>
 
             <!-- Lesson Title -->
             <div class="form-group" ng-class="{ 'has-error' : userForm.LessonTitle.$invalid && !userForm.LessonTitle.$pristine }">
-                <label class:"lableDes">Title: <input type="text" name="LessonTitle" class="form-control" ng-model="user.LessonTitle" ng-minlength="4" ng-maxlength="10"></label>
+                <label class="lableDes">Title: </label>
+                <input type="text" name="LessonTitle" class="form-control form-control-lesson" ng-model="user.LessonTitle" ng-minlength="4" ng-maxlength="10">
                 <p ng-show="userForm.LessonTitle.$error.minlength" class="help-block">Lesson Title is too short.</p>
                 <p ng-show="userForm.LessonTitle.$error.maxlength" class="help-block">Lesson Title is too long.</p>
             </div>
 
             <!-- Date -->
             <div class="form-group" ng-class="{ 'has-error' : userForm.date.$invalid && !userForm.date.$pristine }">
-                <label class:"lableDes">Date: <input type="date" name="date" class="form-control" ng-model="user.date"></label>
+                <label class="lableDes">Date: </label>
+                <input type="date" name="date" class="form-control form-control-lesson" ng-model="user.date">
                 <p ng-show="userForm.date.$invalid && !userForm.date.$pristine" class="help-block">Enter a valid date.</p>
             </div>
             <div class="alert alert-danger" role="alert" ng-show="errorMsg">{{errorMsg}}</div>
