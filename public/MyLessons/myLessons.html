@@ -35,9 +35,11 @@
     </div> 
 
   <div id="main">
-      <section class="box4_myLessons" ng-repeat = "pic in model.lessons">
-        <img width=300 height=300 ng-src = "http://interactive-lesson.herokuapp.com/images/{{pic.presentationUrl}}">
-      </section>
+      <div id="presentBox">
+        <section class="box4_myLessons" ng-repeat = "pic in model.lessons">
+          <img width=300 height=300 ng-src = "http://interactive-lesson.herokuapp.com/images/{{pic.presentationUrl}}">
+        </section>
+      </div>
       
     </div>
     

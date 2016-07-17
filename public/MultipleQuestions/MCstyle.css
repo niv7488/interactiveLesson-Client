@@ -1,0 +1,176 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+div, header, nav, main, section, a {
+    display: block;
+}
+
+section{
+    width: 100%;
+}
+
+body {
+    font-family: arial;
+    color: black;
+    overflow: hidden; 
+}
+ header{
+    height: 50px;
+    background-color: #515664;
+    margin-bottom: 3%;
+    width: 100%;
+}
+
+.page-header{
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    margin-top:30px;
+}
+
+/*.page-header p{
+    float:right;
+}*/
+
+.wrapper{
+    overflow:hidden; 
+    margin-bottom:10px;
+    text-align: center;;
+    margin: 0 auto;
+    margin-top: 160px;
+
+}
+
+.wrapperL{
+    width: 100%;
+    overflow:hidden; 
+    margin-bottom:10px;
+    text-align: center;;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.wrapperLD{
+    margin-top:112px; 
+    float: left;
+    margin: 0 auto;
+}
+.wrapper section{
+    float:left;
+    margin-left: 30px;
+
+}
+
+.wrapper section input{
+    margin-left: 305px;
+    margin-top: 245px;
+}
+
+.navbar-default{
+    background-color: #515664;
+}
+.nav, .navbar-nav{
+    float:right;
+}
+
+.bottonMain{
+    background-image: url("../images/iconForMain.png");
+    width:46px;
+    height: 46px;
+    float: right;
+    position: relative;
+    margin-right: 0.5%;
+    margin-top: 1px;
+}
+.one{
+    background-image: url("../images/2.png");
+    width:31px;
+    height: 42px;
+    position: relative;
+    float: left;
+    margin-top: 4px;
+}
+.two{
+    background-image: url("../images/3.png");
+    width:42px;
+    height: 41px;
+    position: relative;
+    float: left;
+    left: 0.5%;
+    margin-top:4px;
+}
+.three{
+    background-image: url("../images/4.png");
+    width:27px;
+    height: 34px;
+    margin-top: 5px;
+    position: relative;
+    float: left;
+    left: 0.8%;
+    margin-top: 8px;
+}
+.userForm{
+    margin: 0 auto;
+}
+
+.form-control{
+    width: 60%;
+    float: right;
+    margin-right: 115px;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+.form-control-lesson{
+    width: 66%;
+    float: left;
+    margin-bottom: 3%;
+}
+
+.lableDes {
+    text-align: center;
+
+}
+.form-group label{
+    width: 25%;
+    font-weight: bolder;
+    margin-left: 33px;
+    position: relative;
+    top: 12px;
+} 
+
+.form-group {
+    margin-bottom: 10px;
+    padding-top: 15px;
+}
+
+.formDesign{
+    margin: 0px auto;
+    background-color: #f0f1f1;
+    border-radius: 30px;
+    box-shadow: 10px 10px 5px #888888;
+    border-style: solid;
+    border-color: #000000 #000000;
+    height: 450px;
+    width: 65%;
+    border-color: bold;
+}
+
+label{
+     display: initial;
+}
+
+.btn, .btn-primary{
+    display: block;
+    margin: 0px auto;
+    margin-top: 50px;
+}
+.btn-block {
+    display: block;
+    float: right;
+    margin-right: 25%;
+   width: 50%;
+}

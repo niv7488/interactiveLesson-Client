@@ -466,3 +466,8 @@ span{
 
 }
 
+#presentBox section{
+    width: 15%;
+    margin-top: 10%;
+    margin-left: 5%;
+}
