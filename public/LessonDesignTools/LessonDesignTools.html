@@ -35,7 +35,7 @@
     </a>
   </div>
 <header>
-        <a href="index.html" class="bottonMain"></a>
+        <a href="../index.html" class="bottonMain"></a>
         <a href="#"class="one"></a>
         <a href="#" class="two"></a>
         <a href="#"class="three"></a>
@@ -48,22 +48,28 @@
         <a href="#" id="lessOptionsLogo"></a>
         <div class="headLine"> Lesson Design Tools </div>
       </div>
+      <div id="side">
+          <a ng-click="popupClick()" id="add"></a><span>Add Activity</span>
+          <a ng-click="deleteAct()" id="del"></a><span>Delete Activity</span>
+    </div>
     </div> 
-  <a ng-click="deleteAct()"><div class="item4 "><img src="../images/DeleteActivityIcon.png"></div></a></div>
-  <a ng-click="popupClick()"><div class="item4 "><img src="../images/addActivityIcon.png"></div></a></div>
-    <input id="lessonId" type="text">
-    <div class="wrapper">
-      <section id="box4_L2"><img id="background"><input id="fileSelector" file-form-append type="file"></section>
+    
+    <div id="search">
+      <input id="lessonId" type="text" placeholder="Lesson ID">
+    </div>
+    <div class="wrapper wrapperLD">
+      <section id="box"><img id="background"><input id="fileSelector" file-form-append type="file"></section>
       <section id="SelectedIcons">
       <a class="nonexistent" id="mcIcon" href="../MultipleQuestions/MultipleQuestions.html">
         <img src="../images/mcSmall.png">
       </a>
       </section>
+      <a href="../MyLessons/myLessons.html"><section id="meLessonIcon"></section><a>
+      <section id="SaveLessonIcon" ng-click="saveLesson()"></section>
     </div>
     
   </div>
-  <section id="meLessonIcon"></section>
-  <section id="SaveLessonIcon" ng-click="saveLesson()"></section>
+  
   <footer class="text-center">
 
   <script src="app.js"></script>
